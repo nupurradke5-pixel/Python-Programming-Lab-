@@ -1,0 +1,25 @@
+# Read start and end of the range
+start = int(input())
+end = int(input())
+
+primes = []
+
+# Iterate through each number in the inclusive range
+for num in range(start, end + 1):
+    # Prime numbers must be greater than 1
+    if num > 1:
+        is_prime = True
+        # Check for factors from 2 up to the square root of num
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(num)
+
+# Print results based on the output format
+if not primes:
+    print("No primes")
+else:
+    for p in primes:
+        print(p)
