@@ -1,0 +1,20 @@
+# Read three space-separated integers
+a, b, c = map(int, input().split())
+
+# Create a list of the digits to easily access them by index
+digits = [a, b, c]
+
+# The prompt specifies 6 possible arrangements based on indices: 
+# abc, acb, bac, bca, cab, cba
+indices = [
+    (0, 1, 2),
+    (0, 2, 1),
+    (1, 0, 2),
+    (1, 2, 0),
+    (2, 0, 1),
+    (2, 1, 0)
+]
+
+# Iterate through the index patterns and print the combined digits
+for i, j, k in indices:
+    print(f"{digits[i]}{digits[j]}{digits[k]}")
