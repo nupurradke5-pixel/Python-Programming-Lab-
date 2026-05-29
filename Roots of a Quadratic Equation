@@ -1,0 +1,30 @@
+import math
+
+# Taking three space-separated integers as input
+a, b, c = map(int, input().split())
+
+# Calculating the discriminant
+discriminant = b**2 - 4*a*c
+
+# Calculating the real part for all cases
+real_part = -b / (2 * a)
+
+if discriminant > 0:
+    # Roots are real and different
+    sqrt_val = math.sqrt(discriminant)
+    root1 = (-b + sqrt_val) / (2 * a)
+    root2 = (-b - sqrt_val) / (2 * a)
+    print(f"root1 = {root1:.2f}")
+    print(f"root2 = {root2:.2f}")
+
+elif discriminant == 0:
+    # Roots are real and the same
+    root = real_part
+    print(f"root1 = root2 = {root:.2f}")
+
+else:
+    # Roots are imaginary
+    # Calculate the imaginary part
+    imag_part = math.sqrt(-discriminant) / (2 * a)
+    print(f"root1 = {real_part:.2f}+{imag_part:.2f}i")
+    print(f"root2 = {real_part:.2f}-{imag_part:.2f}i")
