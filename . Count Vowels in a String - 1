@@ -1,0 +1,17 @@
+# Read the input string from the user
+text = input()
+
+# Define the set of vowels (both uppercase and lowercase)
+vowels = "aeiouAEIOU"
+
+# Initialize a counter for vowels
+vowel_count = 0
+
+# Iterate through each character in the string
+for char in text:
+    # Check if the character is in the vowel set
+    if char in vowels:
+        vowel_count += 1
+
+# Print the final count
+print(vowel_count)
