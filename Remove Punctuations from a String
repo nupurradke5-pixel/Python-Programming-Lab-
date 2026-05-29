@@ -1,0 +1,13 @@
+import string
+
+# Get input from the user
+input_string = input()
+
+# Create a set of all punctuation marks for fast lookup
+punctuation_marks = set(string.punctuation)
+
+# Filter the string: keep characters that are NOT in the punctuation set
+result = "".join(char for char in input_string if char not in punctuation_marks)
+
+# Print the final result
+print(result)
