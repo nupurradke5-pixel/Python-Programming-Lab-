@@ -1,0 +1,7 @@
+# Read the number of rows from input
+n = int(input())
+
+# Loop from n down to 1
+for i in range(n, 0, -1):
+    # Print i stars in each row
+    print("*" * i)
